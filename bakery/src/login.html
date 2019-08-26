@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <script src="js/jquery.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script>
+        $(function () {
+
+        })
+    </script>
+    <style>
+        form{
+            width: 500px;
+            height: 580px;
+            float: left;
+            font-size: 16px;
+            line-height: 40px;
+        }
+        body{
+            background: #F3F0E9;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <!--头部-->
+    <div class="head row">
+        <div class="pic col-lg-4 col-lg-offset-2">
+            <a href=" "><img src="img/main_02.png" width="360" height="94"/></a>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-lg-offset-1">
+        <img src="img/bg.jpg" />
+    </div>
+    <div class="col-lg-6 col-lg-offset-1" style="padding-top: 150px">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-lg-3 control-label text-left center-block">用户名</label>
+                <div class="col-lg-8">
+                    <input class="form-control" type="text" id="username">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label text-left center-block">密码</label>
+                <div class="col-lg-8">
+                    <input type="password" class="form-control" id="password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-offset-3 col-lg-3">
+                    <button type="button" class="btn btn-info" id="login">登录</button>
+                </div>
+                <div class="col-lg-offset-3 col-lg-2">
+                    <button type="button" class="btn btn-info" id="register">注册</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+</div>
+</body>
+</html>

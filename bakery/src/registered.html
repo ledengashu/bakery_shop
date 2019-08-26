@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <script src="js/jquery.js"></script>
+    <!-- 表单验证-->
+    <script src="https://cdn.bootcss.com/jquery-validate/1.19.1/jquery.validate.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script>
+        $(function () {
+            $("#empForm").validate({
+                rules: {
+                    realname: "required",
+                    username: {
+                        required: true,
+                        rangelength: [5,8]
+                    },
+                    psw: {
+                        required: true,
+                        rangelength: [6,12]
+                    },
+                    psw2: {
+                        required: true,
+                        equalTo: "#psw"
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                },
+                messages: {
+                    realname: "请输入你的真实姓名",
+                    username: {
+                        required: "请输入您的用户名",
+                        rangelength: "用户名必须在{0}-{1}位之间"
+                    },
+                    psw: {
+                        required: "请输入密码",
+                        rangelength: "密码长度必须在{0}-{1}位之间."
+                    },
+                    psw2: {
+                        required: "请再次输入密码",
+                        equalTo: "两次密码保持一致"
+                    },
+                    email: {
+                        required: "请输入您的邮箱",
+                        email: "邮箱格式不正确"
+                    },
+                }
+            });
+        })
+    </script>
+    <style>
+        body{
+            background: #F3F3F3;
+        }
+        form{
+            float: left;
+            font-size: 16px;
+            line-height: 30px;
+        }
+
+        a{
+            float: right;
+            font-size: 12px;
+        }
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!--头部-->
+        <div class="head row">
+            <div class="pic col-lg-4 col-lg-offset-2">
+                <a href=" "><img src="img/main_02.png" width="360" height="94"/></a>
+            </div>
+        </div>
+        <h2 align="center">注册</h2>
+        <div class="col-lg-6 col-lg-offset-4">
+            <form name="empForm" id="empForm" method="get" action="test.html" novalidate="novalidate">
+                <table style="border: none">
+                    <tr>
+                        <td style="white-space: pre"> </td>
+                    </tr>
+                    <tr>
+                        <td>真实姓名(不能为空 )</td>
+                        <td><input type="text" id="realname" name="realname"></td>
+                    </tr>
+                    <tr>
+                        <td style="white-space: pre"> </td>
+                    </tr>
+                    <tr>
+                        <td>登录名(登录名不能为空,长度在5-8之间):</td>
+                        <td><input type="text" id="username" name="username"></td>
+                    </tr>
+                    <tr>
+                        <td style="white-space: pre"> </td>
+                    </tr>
+                    <tr>
+                        <td>密码(不能为空,长度在6-12之间):</td>
+                        <td><input type="password" id="psw" name="psw"></td>
+                    </tr>
+                    <tr>
+                        <td style="white-space: pre"> </td>
+                    </tr>
+                    <tr>
+                        <td>重复密码(不能为空,长度在6-12之间):</td>
+                        <td><input type="password" id="psw2" name="psw2"></td>
+                    </tr>
+                    <tr>
+                        <td style="white-space: pre"> </td>
+                    </tr>
+                    <tr>
+                        <td align="left">电子邮箱:</td>
+                        <td><input type="text" id="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td style="white-space: pre"> </td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="2">
+                            <input type="submit" name="firstname" id="firstname" value="保存">
+                            <a href="#">已有账号，去登录></a>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+
+
